@@ -1,2 +1,7 @@
 
-<h1>Server Component !</h1>
+<button type="button" name="button" class="btn" [disabled]="!allowNewServer" >Add Server</button>
+<p>{{ allowNewServer }}</p>
+<p [innerText]="allowNewServer"></p>
+<br/><br/>
+<hr>
+<h1>{{ 'Server' }} {{serverId}} is now {{serverStatus}}. ({{myMethod()}})</h1>
