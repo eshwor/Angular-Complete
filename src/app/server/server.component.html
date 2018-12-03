@@ -1,7 +1,10 @@
 
-<button type="button" name="button" class="btn" [disabled]="!allowNewServer" >Add Server</button>
-<p>{{ allowNewServer }}</p>
-<p [innerText]="allowNewServer"></p>
+<button type="button" name="button" class="btn" [disabled]="!allowNewServer" (click)="createServer()" >Add Server</button><br><br>
+<input type="text" name="" value="" (input)="onUpdateServer($event)"><br><br>
+<input type="text" name="" value="" [(ngModel)]="serverCretionStatus"><br>
+<!-- <p>{{ allowNewServer }}</p>
+<p [innerText]="allowNewServer"></p> -->
+<p> {{ serverCretionStatus }} </p>
 <br/><br/>
 <hr>
 <h1>{{ 'Server' }} {{serverId}} is now {{serverStatus}}. ({{myMethod()}})</h1>

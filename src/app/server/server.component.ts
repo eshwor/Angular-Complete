@@ -24,6 +24,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServerComponent implements OnInit{
 
   allowNewServer = false;
+  serverCretionStatus = "No, Server was created !";
+
 
   serverId: number = 10;
   serverStatus: string = "Offline !";
@@ -34,9 +36,17 @@ export class ServerComponent implements OnInit{
     return this.serverName;
   }
 
+  createServer(){
+    this.serverCretionStatus = "Congratulation, your server has been successfully created";
+  }
+
+  onUpdateServer(event: Event){
+    this.serverCretionStatus = (<HTMLInputElement>event.target).value;
+  }
+
   //Constructor
   constructor(){
-    setTimeout(() => { this.allowNewServer = true; } ,10000);
+    setTimeout(() => { this.allowNewServer = true; } ,3000);
   }
 
   ngOnInit(){}
